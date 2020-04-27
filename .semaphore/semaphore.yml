@@ -1,0 +1,14 @@
+version: v1.0
+name: action
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+blocks:
+  - name: action
+    task:
+      jobs:
+      - name: Compile visio
+        commands:
+          - checkout
+          - . ./dosvse
